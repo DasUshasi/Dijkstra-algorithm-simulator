@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIJKSTRA'S ALGORITHM SIMULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="graph"></div>
+        <button id="createNode">create nodes</button>
+        <button id="createLines">create edges</button>
+        <button id="run">run algorithm</button>
+        <button id="reload" onclick="window.location.reload()">input another graph</button>
+    </div>
+    <div id="input">
+        <h1>DIJKSTRA'S ALGORITHM SIMULATOR</h1>
+        <label for="nodes" class="text">Enter number of nodes (nodes will be labelled from 0 to n - 1): </label>
+        <input type="text" id="numNodes" placeholder="n = ">
+        <br class="rem">
+        <label for="edges" class="text">Edges in form 'node1'-'node2'-'edge weight' (comma-separated pairs of nodes):</label>
+        <input type="text" id="edges" placeholder="0-1-3 means bidirectional edge between 0 and 1 with edge weight 3">
+        <br class="rem">
+        <label for="src" class="text">Enter source node:</label>
+        <input type="text" id="src">
+        <br class="rem">
+        <button id="done">graph input completed</button>
+        <p>Colour codes:</p>
+        <p>Red node: current visiting node</p>
+        <p>Green node: node whose shortest distance is calculated</p>
+        <p>Yellow node: node which is visited but final distance is still not calculated</p>
+        <p>Blue edge: current traversing edge</p>
+        <div id="dists"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
